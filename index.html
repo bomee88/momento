@@ -7,9 +7,27 @@
     <title>Document</title>
 </head>
 <style>
-    .greating,
+    @keyframes fadeIn {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    .greeting,
     .form{display: none;}
     .showing{display: block;}
+    .bgImage{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        animation: fadeIn 1s ease-in-out;
+    }
+
 </style>
 <body>
     <div class="js-clock">
@@ -18,8 +36,17 @@
     <form action="" class="js-form form">
         <input type="text" placeholder="What is your name?">
     </form>
-    <h4 class="js-greating greaing"></h4>
+    <h4 class="js-greeting greeting"></h4>
+    <form action="" class="js-toDoForm">
+        <input type="text" placeholder="Write a to do">
+    </form>
+    <ul class="js-toDoList">
+    
+    </ul>
     <script src="js/clock.js"></script>
-    <script src="js/greating.js"></script>
+    <script src="js/greeting.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/bg.js"></script>
+    <script src="js/weather.js"></script>
 </body>
 </html>
