@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Pacifico&display=swap');
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.greeting,
+.form{display: none;}
+.showing{display: block;}
+body{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Nanum Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgba(0,0,0,0.7);
+}
+.bg-area{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    z-index: -1;
+    animation: fadeIn 1s ease-in-out;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.js-clock{
+    width: 100%;
+    text-align: center;
+    font-size: 56px;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: -3px;
+    text-shadow: 0px 3px 20px rgba(0,0,0,0.7);
+}
+
+.js-clock h1{font-weight: inherit; font-family: 'Nanum Gothic'; margin-bottom: 20px;}
+
+form{width: 100%; display: block; text-align: center;}
+input{all: unset; border-bottom: 1px solid #fff; color: #fff;}
+h4{color: #fff; font-size: 32px; text-shadow: 0px 3px 10px rgba(0,0,0,0.7); font-family: 'Pacifico', 'Nanum Gothic'; text-shadow: 0px 3px 7px rgba(0,0,0,0.7);}
+input::placeholder{color: rgba(255,255,255,0.7);;}
+
+h2{width: 100%; text-align: center; color: #fff;font-family: 'Pacifico'; margin-top: 50px; margin-bottom: 0px; text-shadow: 0px 3px 6px rgba(0,0,0,0.7);}
+.js-weather{width: 100%; display: block; padding: 20px; color: rgba(255,255,255,0.5); font-size: 13px; text-align: right;;} 
+ul li{color: #fff; margin: 10px 0;}
+ul li span{padding-right: 20px; text-shadow: 0px 3px 6px rgba(0,0,0,0.7);}
+ul li button{all: unset; color: #fff; font-weight: bold; font-family: 'Roboto'; padding: 4px 10px 2px; margin: 0 5px; border: 1px solid rgba(255,255,255,0.5); font-size: 10px; font-weight: thin; line-height: 1.2; border-radius: 5px; background-color: rgba(255,255,255,0.2); transition: 0.2s all; cursor: pointer;}
+ul li button:hover{animation: pingpong 0.5s infinite ease-in-out; background-color: rgba(0,0,0,0.2);}
+@keyframes pingpong{
+    0%{transform: translateY(0px);}
+    20%{transform: translateY(0.5px);}
+    40%{transform: translateY(0px);}
+    100%{transform: translateY(0px);}
+}
+
+.js-weather{position: absolute; top: 20px; right:20px;}

@@ -1,13 +1,14 @@
-const body = document.querySelector("body");
+const body = document.querySelector(".bg-area");
 
-const IMG_NUMBER = 5;
+const IMG_NUMBER = 6;
 
 
 function paintImage(imgNumber){
     const image = new Image();
     image.src = `img/img${imgNumber + 1}.jpg`;
-    body.appendChild(image);
-    image.classList.add("bgImage");
+    //body.appendChild(image);
+    //image.classList.add("bgImage");
+    body.style.backgroundImage = `url(${image.src})`;
 }
 
 function genRandom(){

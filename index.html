@@ -4,45 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common.css">
     <title>Document</title>
 </head>
-<style>
-    @keyframes fadeIn {
-        from{
-            opacity: 0;
-        }
-        to{
-            opacity: 1;
-        }
-    }
-    .greeting,
-    .form{display: none;}
-    .showing{display: block;}
-    .bgImage{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        animation: fadeIn 1s ease-in-out;
-    }
-
-</style>
 <body>
-    <div class="js-clock">
-        <h1>00:00</h1>
+    <div class="bg-area">
+        <span class="js-weather"></span>
+        <div class="js-clock">
+            <h1>00:00</h1>
+        </div>
+        <form action="" class="js-form form">
+            <input type="text" placeholder="What is your name?">
+        </form>
+        <h4 class="js-greeting greeting"></h4>
+        <form action="" class="js-toDoForm">
+            <input type="text" placeholder="Write a to do">
+        </form>
+        <h2>Today's to do</h2>
+        <ul class="js-toDoList">
+        </ul>
+        <h2>Finished</h2>
+        <ul class="js-fnsList">
+        </ul>
     </div>
-    <form action="" class="js-form form">
-        <input type="text" placeholder="What is your name?">
-    </form>
-    <h4 class="js-greeting greeting"></h4>
-    <form action="" class="js-toDoForm">
-        <input type="text" placeholder="Write a to do">
-    </form>
-    <ul class="js-toDoList">
-    
-    </ul>
     <script src="js/clock.js"></script>
     <script src="js/greeting.js"></script>
     <script src="js/todo.js"></script>
